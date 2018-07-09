@@ -1,0 +1,50 @@
+\begin{figure}[h]
+\centering
+\caption{MyCaption}
+
+
+
+\begin{tikzpicture}
+ \begin{axis}[
+  ymax=1100, ymin=0,
+  date coordinates in = x,
+  date ZERO = 1950-01-01,
+  xmin = 1972-01-01,
+  xmax = 2015-12-31,
+  %xtick = {1972-01-01, 1980-01-01,1990-01-01,2000-01-01,2005-01-01,2010-01-01,2015-01-01},
+ xticklabel=\year,
+  ymajorgrids=true,
+ minor y tick num = 3,
+  %xlabel=Jahr,
+  %extra y ticks={820, 200},
+  %extra y tick style={grid=major,yticklabel pos=right,ytick pos=right},
+ %tick label style={xshift=-1cm},%enlarge x limits=1,
+  ylabel=Anzahl Veröffentlichungen,
+  grid style=dashed,
+  width=\textwidth,
+   height=\axisdefaultheight,
+  legend pos=north east]
+  
+\addplot [thin, blue!30!black]table [x=Year, y=GM]{text/tikz/data/dat2.dat};
+\addplot [thin, blue!80!black]table [x=Year, y=GMI]{text/tikz/data/dat2.dat};
+%\addplot [thin, blue] coordinates {(1975-01-01, 10) (2010-01-01, 500)};
+\addlegendentry{Geschäftsmodell}
+\addlegendentry{Geschäftsmodellinnovation}
+\end{axis}
+\end{tikzpicture}
+
+
+
+
+
+\label{fig:myLabel}
+\end{figure}
+
+
+
+
+
+
+
+
+
