@@ -1,0 +1,40 @@
+\newpage
+\begin{table}[H]
+\centering
+\caption{Darstellung der Schlüsselbegriffe und des allgemeinen Suchterms}
+\label{suchterm}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{L{0.20\textwidth}L{0.20\textwidth}L{0.30\textwidth}L{0.30\textwidth}}
+\toprule
+\textbf{Gruppe 1} & \textbf{Gruppe 2}                                                                   & \textbf{Gruppe 3.1}                                                                      & \textbf{Gruppe 3.2}                                                                        \\
+Kreativität       & Experiment                                                                          & Wirtschaftsinformatik                                                                    & Wirtschaftsinformatik                                                                      \\ \midrule
+creativity        & experiment*                                                                         & information system                                                                       & creativity support system                                                                  \\
+creative          &                                                                                     & information technology                                                                   &                                                                                            \\
+idea*             &                                                                                     & information science                                                                      &                                                                                            \\
+                  &                                                                                     & computer science                                                                         &                                                                                            \\
+                  &                                                                                     & software                                                                                 &                                                                                            \\
+                  &                                                                                     & it artifact                                                                              &                                                                                            \\ \midrule
+Suchterm allgemein:         & \multicolumn{3}{p{0.85\textwidth}}{((``creativity`` \emph{OR} ``creative`` \emph{OR} ``idea*``) \emph{AND} (``experiment``) \emph{AND} (``information system`` \emph{OR} ``information technology`` \emph{OR} ``informationscience`` \emph{OR} ``computer science`` \emph{OR} ``software`` \emph{OR} ``it artifact``)) \emph{OR} (``creativity support system``)} \\ \bottomrule
+\end{tabular}%
+}
+\end{table}
+\newpage
+
+\begin{table}[H]
+\centering
+\caption{Datenbankkonfiguration und Ergebnisse der Abfragen, in Anlehnung an \cite{Hewing.2014c} }
+\label{Datenbankabfrage}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{L{0.1\textwidth}L{0.05\textwidth}p{0.56\textwidth}C{0.15\textwidth}L{0.20\textwidth}L{0.1\textwidth}} \toprule
+\textbf{Datenbank}             & \textbf{Treffer} & \textbf{Exakter Suchterm}                                                                                                                                                                                                                                                                                                                                                                                                                                                      & \textbf{Einstellung} & \textbf{Suchfelder}                              & \textbf{Filter}                             \\ \toprule
+
+EBSCOhost\tablefootnote{Datenbank: ``Business Source Complete``}                       & 58               & \textit{allgemeiner Suchterm                                                                                                                                                                                                                   } &  Modus: Find all my search terms  & ``Title`` OR ``Abstract`` OR ``Keywords``        & ``academic journals``; ``english``                  \\ \midrule
+
+Web of Science\tablefootnote{Datenbank: ``Core Collection``} & 128              & \textit{allgemeiner Suchterm}                                                                                                                                                                                                                        & Timespan: All years         & ``Topic`` OR ``Title`` OR ``Author Identifiers`` & ``article``; ``english``; WoS-Categories\tablefootnote{Computer Science Theory Methods, Computer Science Information Systems, Computer Science Software Engineering, Computer Science Artificial Intelligence, Computer Science Interdisciplinary Applications, Management, Business} \\ \midrule
+AISeL                          & 170              & title:(``creativity`` OR ``creative`` OR ``idea*`` ) AND title:``experiment`` OR abstract:( ``creativity`` OR ``creative`` OR ``idea*`` ) AND abstract:``experiment`` OR title:``creativity support system`` OR abstract:``creativitysupport system``                                                                                                                                                                                                                          & Limit search to: AISeL         & ``Title`` OR ``Abstract``                        & --                                           \\ \midrule
+ACM DL                         & 39               & (acmdlTitle:(``creativity`` OR ``creative`` OR ``idea*``) OR recordAbstract:(``creativity`` OR ``creative`` OR ``idea*``) OR keywords.author.keyword:( ``creativity`` OR ``creative`` OR ``idea*``) AND acmdlTitle:(``experiment``) OR recordAbstract:(``experiment``) OR keywords.author.keyword:(``experiment``))OR acmdlTitle:(``creativity support system``) OR keywords.author.keyword:(`` creativity support system``) OR recordAbstract:(``creativity support system``) & --         & ``Title`` OR ``Abstract`` OR ``Author Keywords`` & --                                           \\ \midrule
+Duplikate                      & 31               &                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &           &                                                  &                                             \\
+\textbf{Gesamt}                & \textbf{417}     &                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &           \multicolumn{3}{r}{Zeitpunkt der Abfrage: 02.03.2018}                                    \\ \bottomrule                                       
+\end{tabular}
+}
+\end{table}

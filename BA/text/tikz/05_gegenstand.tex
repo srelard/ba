@@ -1,0 +1,29 @@
+\begin{figure}[h]
+\centering
+\caption{Untersuchsungsgegenstand der Arbeit, eigene Darstellung}
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}
+\tikzstyle{every node}=[font=\small]
+
+
+\node [zylinder, align=center, fill=myyellow!60!, font=\bfseries, thick] (n5) at (1,26) {Geschäftsmodell-\\modellierungstools\\(RQ2)};
+\node [kreis, fill=myblue!60!, font=\bfseries] (n4) at (1,31.75) { Empirische\\Forschungsmethode\\(Experiment)\\(RQ1)};
+\node [kreis] (n1) at (-6.5,34.5) {Wirtschafts-\\informatik};
+\node [kreis] (n2) at (-6.5,29) {Artefakt:\\Kreativitäts-\\unterstützende \\Anwendungen\\(CSS)};
+\node [kreis] (n3) at (-6.5,23.5) {Geschäftsmodell-\\innovation};
+\node [rectangle, draw=none, align=center, inner sep=10pt] (n6) at (6.5,29) {Erkenntnisse Methodenbasis \\Experimental- und \\Kreativitätsforschung};
+\draw[pfeil_einfach] (n1.east) |-  ++(1,0) |-   node[pos=.75, left, rotate=0, align=center, above] {Artefakt-\\evaluation}(n4.west);
+\draw[pfeil_einfach] (n2.east) |-  ++(1,0) |-  (n4.west);
+\draw[pfeil_doppelt] (n1.west) -|  ++(-2,0) |-  node[pos=.25, above, rotate=90, align=center] {Stetige Effektivitätsprüfung führt zu Redesign \\(Hevner, Chatterjjee 2010, S.16)}(n2.west);
+\draw[pfeil_einfach] (n4.east) -|  ++(3,0) -|  node[pos=-1.2, above, rotate=0, align=center] {Synthese}(n6.north);
+\draw[pfeil_einfach, densely dashed] (n6.south) |-  ++(0,0) |-  node[pos=.75, above, rotate=0, align=center] {Implikationen}(n5.east);
+\draw[pfeil_einfach] (n2.south) |-  ++(0,0) |-   node[pos=.8, above, rotate=0, align=center] {Bilden}(n5.west);
+\draw[pfeil_einfach] (n5.south) |-  ++(0,0) |-   node[pos=.85, above, rotate=0, align=center] {Unterstützen}(n3.east);
+\draw (n1) edge[pfeil_einfach] node[pos=.5, left, rotate=0, align=center] {Gestaltung/Verbesserung\\von Artefakten}(n2);
+\draw(n6.south west) edge (n6.south east);
+\draw(n6.north west) edge (n6.north east);
+\end{tikzpicture}
+}
+
+\label{fig:myLabel}
+\end{figure}

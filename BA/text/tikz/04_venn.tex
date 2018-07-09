@@ -1,11 +1,27 @@
 \begin{figure}[h]
 \centering
-\caption{MyCaption}
+\caption{Zielliteratur}
 
+\resizebox{.6\textwidth}{!}{%
 \begin{tikzpicture}
+\def\firstcircle{(-5,10.5) circle (4)}
+\def\secondcircle{(-11,10.5) circle (4)}
+\def\thirdcircle{(-8,6.6) circle (4)}
 
+
+\draw [thick]\firstcircle node  [align=center, above, font=\large] { Experiment};
+\draw [thick] \secondcircle node [align=center, above, font=\large] { Wirtschafts-\\informatik};
+\draw [thick]\thirdcircle node  [align=center, below, font=\large]{ Kreativität};
+
+\begin{scope}
+      \clip \firstcircle;
+      \clip \secondcircle;
+      \fill[mygray] \thirdcircle;
+    \end{scope}
+
+\node [text=black]at (-8,9.5) {\large \bfseries x};
 \end{tikzpicture}
-
+}
 
 \label{fig:myLabel}
 \end{figure}

@@ -32,7 +32,21 @@ left=3cm,right=2cm,top=2cm,bottom=2cm, showframe]{geometry}
 
 %//Captions, Bilder\\%
 \usepackage{subcaption} % Anzeigen von Bildern aus mehreren Einzelbildern
-\captionsetup[subfigure]{list=false, font=large, labelfont=bf,labelformat=brace, position=top}
+%\captionsetup[subfigure]{list=false, font=large, labelfont=bf,labelformat=brace, position=top}
+\captionsetup[figure]{
+%skip=5cm,
+position=below,
+justification=centering,
+font=small
+}
+\captionsetup[table]{
+%skip=5cm,
+position=below,
+justification=centering,
+font=small
+}
+\setlength\abovecaptionskip{10pt}
+\setlength\belowcaptionskip{10pt}
 
 %//Diverses\\%
 \renewcommand{\topfraction}{0.85} % Anteil einer Seite, die von Floats belegt sein darf (default 0.7)
@@ -157,9 +171,13 @@ doi=false
 %\cleardoublepage
 %//Ausprobieren\\%
 
+\input{BA/text/tikz/styles.tex}
+
 \mainmatter % der eigentliche Text folgt hier
 \input{BA/text/tikz/01_stat_gmi.tex}
 \input{BA/text/tikz/02_paper_year.tex}
+\input{BA/text/tikz/04_venn.tex}
+\input{BA/text/tikz/05_gegenstand.tex}
 \input{text/mainmatter/01_einleitung/01_einleitung}
 \input{text/mainmatter/02_grundlagen/02_grundlagen_exp}
 \input{text/mainmatter/02_grundlagen/02_grundlagen_gm}
