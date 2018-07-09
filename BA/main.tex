@@ -74,7 +74,7 @@ pdfpagelabels=true,
 plainpages=false,
 colorlinks=true,
 citecolor=blue,
-%linkcolor=blue,
+linkcolor=blue,
 urlcolor=blue}
 
 %//BibLatex\\%
@@ -138,9 +138,9 @@ doi=false
 \begin{onehalfspace} %Start 1,5-facher Zeilenabstand
 \pagestyle{empty}
 \pagenumbering{alph}
-\input{text/titelpage} \cleardoublepage
-\input{text/erklaerung} \cleardoublepage
-\input{text/abstract} \cleardoublepage
+\input{text/preamble/titelpage.tex} \cleardoublepage
+\input{text/preamble/erklaerung} \cleardoublepage
+\input{text/preamble/abstract} \cleardoublepage
 \pagestyle{scrheadings}
 \frontmatter
 \tableofcontents \cleardoublepage
@@ -148,7 +148,7 @@ doi=false
 \listoffigures \cleardoublepage
 %\listofalgorithms \cleardoublepage
 \listoftables \cleardoublepage
-\input{text/abkuerzung} \cleardoublepage
+\input{text/preamble/abkuerzung} \cleardoublepage
 
 %//Ausprobieren\\%
 %\newfloat{ergebnisse}{thb}{loh}[chapter] % Liste der detaillierten Ergebnisse
@@ -158,7 +158,22 @@ doi=false
 %//Ausprobieren\\%
 
 \mainmatter % der eigentliche Text folgt hier
-\input{text/01einleitung}
+\input{text/mainmatter/01_einleitung/01_einleitung}
+\input{text/mainmatter/02_grundlagen/02_grundlagen_exp}
+\input{text/mainmatter/02_grundlagen/02_grundlagen_gm}
+\input{text/mainmatter/02_grundlagen/02_grundlagen_krea}
+\input{text/mainmatter/02_grundlagen/02_grundlagen_rev}
+\input{text/mainmatter/02_grundlagen/02_grundlagen_wi}
+\input{BA/text/mainmatter/03_methode/031_literaturanalyse_rq1/0311_klassifikation.tex}
+\input{BA/text/mainmatter/03_methode/031_literaturanalyse_rq1/0312_identifikation.tex}
+\input{BA/text/mainmatter/03_methode/031_literaturanalyse_rq1/0313_analyse.tex}
+\input{BA/text/mainmatter/03_methode/031_literaturanalyse_rq1/0314_ergebnisse.tex}
+\input{BA/text/mainmatter/03_methode/032_implikationen_rq2/0321_matching_gmi_css.tex}
+\input{BA/text/mainmatter/03_methode/032_implikationen_rq2/0322_ergebnisse_implikationen.tex}
+%\input{BA/text/mainmatter/04_ergebnisse/041_ergebnisse.tex}
+\input{BA/text/mainmatter/05_diskussion/051_diskussion.tex}
+\input{BA/text/mainmatter/06_future_avenues/061_future_avenues.tex}
+\input{BA/text/mainmatter/07_fazit/071_fazit.tex}
 %\input{text/stand}
 %\input{text/konzept}
 %\input{text/ergebnisse}
