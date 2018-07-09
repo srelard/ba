@@ -1,0 +1,86 @@
+%//Subcaption\\%
+\begin{table}
+\centering
+\begin{subtable}[c]{0.45\textwidth}
+\begin{tabular}{l}
+\titelobenlinks
+\end{tabular}
+\subcaption{Subtable Tabelle Nr. 1}
+\end{subtable}
+\begin{subtable}[c]{0.45\textwidth}
+\begin{tabular}{l}
+\titelobenrechts
+\end{tabular}
+\subcaption{Subtable Tabelle Nr. 2}
+\end{subtable}
+\caption{Fachgebiet und Logo}
+\end{table}
+
+\begin{figure}
+\centering
+\subcaptionbox{Subcaption A}{\includegraphics[width=0.20\textwidth]{example-image-a}}%
+\hfill
+\subcaptionbox{Subcaption B}{\includegraphics[width=0.20\textwidth]{example-image-b}}%
+\hfill
+\subcaptionbox{Subcaption C}{\includegraphics[width=0.20\textwidth]{example-image-c}}%
+\hfill
+\subcaptionbox{Subcaption D}{\includegraphics[width=0.20\textwidth]{example-image}}%
+\caption{Caption}
+\end{figure}
+
+
+\begin{equation*}
+\mathcal{L} ,\boldsymbol{a} ,n\subset (\mathbb{R\cap N}) \ < \mathrm{gen,diff,min}> 
+\end{equation*}
+
+%//Tabelle mit ResizeBox\\%
+\begin{table}[H]
+\centering
+\caption{My Caption}
+\label{tab: myLabel}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}L{0.1\textwidth}C{0.05\textwidth}}
+\toprule
+\textbf{Verfahren}           &           \textbf{E}   \\ \midrule
+RAT &  x   \\ 
+CAT &   x  \\
+\multicolumn{2}{l}{E=Eigenbeurteilung,\; F=Fremdbeurteilung,\; T=Kreativitätstest}\\ \bottomrule              
+\end{tabular}}
+\end{table}
+
+\renewcommand{\arraystretch}{1.1} %erhöht zeilenabstand in tabellen
+
+%//Figures\\%
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth, angle=0, trim=10pt 10pt 10pt 10pt,clip]{ressourcen/images/final/06_gegenstandarbeit}
+\caption{MyCaption}
+\label{fig:myLabel}
+\end{figure}
+
+
+
+%//Labeling\\%
+ch:		chapter
+sec:	section
+subsec:	subsection
+fig:	figure
+tab:	table
+eq:		equation
+lst:	code listing
+itm:	enumerated list item
+alg:	algorithm
+app:	appendix subsection
+
+
+%//Theoreme und Sätze\\%
+\begin{theorem}
+Ein Satz mit x, das war wohl nix.
+\end{theorem}
+\begin{definition}
+Hier ist Platz fr eine lange lange Definition
+\end{definition}
+\begin{lemma}
+Hier ist Platz fr eine lange lange Definition
+\end{lemma}
+

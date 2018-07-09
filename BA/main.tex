@@ -1,0 +1,170 @@
+%//Allgemeine Formatierung\\%
+\documentclass[
+%DIV = calc, %automatische Berechnung vonsseitenrändern
+10pt,a4paper,oneside,bibtotoc, liststotoc, headsepline, smallheadings, openright, fleqn,appendixprefix, BCOR5mm]
+{scrbook}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{exscale} % Anpassung mathematischer Symbole an die Schriftgröße
+\usepackage{amstext} % \text in mathematischer Umgebung
+\usepackage{verbatim} % Funktion zum Schreiben von unformatiertem Text
+\usepackage{float} % Ermöglicht das Erstellen von eigenen Float Umgebungen
+\usepackage[section]{placeins} % Verhindert das Wandern von floats in eine andere section
+\usepackage{makeidx}
+
+%//Syntaktische Formatierung\\%
+\usepackage{scrlayer-scrpage}%Kopf- Fußzeile
+\usepackage[onehalfspacing]{setspace} % Einstellen des Zeilenabstandes
+\singlespacing % Zeilenabstand setzen (alternativ: onehalfspacing, doublespacing)
+\usepackage[
+includeheadfoot,
+left=3cm,right=2cm,top=2cm,bottom=2cm, showframe]{geometry}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{4}
+
+%//Font\\%
+\usepackage{lmodern}
+
+%//Captions, Bilder\\%
+\usepackage{subcaption} % Anzeigen von Bildern aus mehreren Einzelbildern
+\captionsetup[subfigure]{list=false, font=large, labelfont=bf,labelformat=brace, position=top}
+
+%//Diverses\\%
+\renewcommand{\topfraction}{0.85} % Anteil einer Seite, die von Floats belegt sein darf (default 0.7)
+\renewcommand{\textfraction}{0.1} % Anteil einer Seite, die mindestens Text sein muss (default 0.2)
+\renewcommand{\floatpagefraction}{0.75} % Anteil einer Seite, die ein Float einnehmen darf, ohne auf die nächste Seite gesetzt zu werden (default 0.5)
+\usepackage{array} % Tabellen
+\usepackage{rotating} % rotierte Tabellen und Bilder
+\usepackage{xcolor} 
+\usepackage{graphicx}
+\newtheorem{theorem}{Satz}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\usepackage[withpage]{acronym}
+
+%//Tikz etc.\\%
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{dateplot}
+\usepgfplotslibrary{units}
+
+%//Tabellen etc.\\%
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tablefootnote}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
+%\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}} vertikale zentrierung
+
+%//Zitate und Links\\%
+\usepackage{csquotes}
+\usepackage[]{hyperref}
+\hypersetup{
+bookmarksopen=true,
+pdfpagelabels=true,
+plainpages=false,
+colorlinks=true,
+citecolor=blue,
+%linkcolor=blue,
+urlcolor=blue}
+
+%//BibLatex\\%
+\usepackage[backend=biber, 
+style=authoryear, %% Zitierstil
+natbib=true, %% Bereitstellen von natbib-kompatiblen Zitierkommandos
+hyperref=true, %% hyperref-Paket verwenden, um Links zu erstellen
+maxcitenames=1,
+uniquelist=false,
+bibstyle=numeric,
+url=false,
+doi=false
+]{biblatex}
+%\addbibresource{bibfile.bib} %% Einbinden der bib-Datei
+%\DefineBibliographyStrings{ngerman}{andothers={et al.}} % et al. statt u.a.
+%\renewcommand*{\nameyeardelim}{\addcomma\space} % Macht im Zitat ein Komma vor das Jahr
+
+%//Metadaten\\%
+\newcommand{\logo}{
+	\includegraphics[width=0.6\textwidth]{images/Logo_Uni_Paderborn}\\
+}
+\newcommand{\fachbereich}{
+	\begin{tabular}{c}
+	Fachgebiet Wirtschaftsinformatik   \\
+	Information Management \& E-Finance  \\
+	Prof. Dr. Dennis Kundisch    \\
+	Universität Paderborn   \\
+	\end{tabular}
+}
+\newcommand{\titel}{
+	Experimente in der Wirtschaftsinformatik zu Kreativität: Ein
+	Systematischer Literaturüberblick und Implikationen für
+	Geschäftsmodellmodellierungstools
+}
+\newcommand{\vorgelegtvon}{
+	vorgelegt im Rahmen der Abschlussprüfung\\
+	für den Bachelor-Studiengang\\
+	der Wirtschaftsinformatik
+}
+\newcommand{\autorpruefer}{
+	\begin{tabular}{ll}
+      Autor: & Sebastian Relard \\
+      Matr.-Nr.: & 6697977\\
+      Adresse: & Borchener Straße 106\\
+      & 33098 Paderborn\\
+      E-Mail: & srelard@mail.upb.de\\
+      &\\
+      &\\
+      Erstprüfer: & Prof. Dr. Dennis Kundisch \\
+      Zweitprüfer: & Prof. Dr. Leena Suhl \\
+      Betreuer: & Daniel Szopinski \\
+	\end{tabular}
+}
+\newcommand{\datum}{
+	Paderborn, den \today
+}
+
+
+
+\begin{document}
+\begin{onehalfspace} %Start 1,5-facher Zeilenabstand
+\pagestyle{empty}
+\pagenumbering{alph}
+\input{text/titelpage} \cleardoublepage
+\input{text/erklaerung} \cleardoublepage
+\input{text/abstract} \cleardoublepage
+\pagestyle{scrheadings}
+\frontmatter
+\tableofcontents \cleardoublepage
+%\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures \cleardoublepage
+%\listofalgorithms \cleardoublepage
+\listoftables \cleardoublepage
+\input{text/abkuerzung} \cleardoublepage
+
+%//Ausprobieren\\%
+%\newfloat{ergebnisse}{thb}{loh}[chapter] % Liste der detaillierten Ergebnisse
+%\floatname{ergebnisse}{Ergebnisse}
+%\listof{ergebnisse}{Liste der detaillierten Ergebnisse}
+%\cleardoublepage
+%//Ausprobieren\\%
+
+\mainmatter % der eigentliche Text folgt hier
+\input{text/01einleitung}
+%\input{text/stand}
+%\input{text/konzept}
+%\input{text/ergebnisse}
+%\input{text/zusammenfassung}
+\printbibliography
+%\input{text/anhang} % Anhänge
+\end{onehalfspace} %Ende 1,5-facher Zeilenabstand
+
+\end{document}
