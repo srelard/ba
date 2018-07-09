@@ -1,0 +1,93 @@
+\begin{figure}[h]
+\centering
+\caption{Vergleich der Experimente, eigene Darstellung in Anlehnung an \cite{hewing}}
+\resizebox{\textwidth}{!}{%
+
+\begin{tikzpicture}
+\tikzstyle{rechteck_bold}=[rechteck, font=\bfseries, draw=none, minimum height=1.5cm]
+\node[rechteck] (5) at (-10.5,-3) {Bedingungskontrolle Sekundärvarianz möglich? (Ceteris paribus)};
+\node [rechteck] (8) at (-2.5,-3) {Bedingungskontrolle Sekundärvarianz möglich? (Ceteris paribus)};
+\node [rechteck](4) at (-6.5,0.5) {Werden Probandengruppen zufällig gebildet (nicht selegiert) und den Versuchsbedingungen oder -abfolgen zufällig zugewiesen?};
+\node [rechteck](3) at (-3,3) {Werden mehrere Gruppen/Versuchsbedingungen untersucht?};
+\node [rechteck] (2) at (0.5,5.5) {Bestimmt die unabhängige Variable die abhängige Variable? (uV -> aV)};
+\node [rechteck](1) at (4,8) {Ist eine Unterscheidung von unabhängiger Variable (uV) und abhängiger Variable (aV) möglich?};
+\node [rechteck] (11) at (9,2.5) {aV gegeben, uV gesucht};
+\node [rechteck](10) at (9,5.5) {Korrelationsstudie \\(6)};
+\node [rechteck](9) at (3,0.5) {Vorexperimentelle Versuchsanordnung (one-shot-case-study)\\(4)};
+\node [rechteck] (13) at (5,-3) {Feldstudie \\(3)};
+\node [rechteck_bold] (6) at (-14,-6) {(Labor)-Experiment\\(1.1)};
+\node [rechteck_bold] (7) at (-8,-6) {Feld-Experiment\\(1.2)};
+\node [rechteck_bold] (14) at (-2.5,-6) {Quasi-Experiment\\(2)};
+\node [rechteck] (12) at (9,-0.5) {Ex-post-facto-Studie\\(5)};
+
+\draw[pfeil_einfach] (1.west) -|  ++(0,0) -|  node[pos=.7, fill=white, rotate=0, align=center] {ja}(2.north);
+\draw[pfeil_einfach] (2.west) -|  ++(0,0) -|  node[pos=.7,fill=white , rotate=0, align=center] {ja}(3.north);
+\draw[pfeil_einfach] (3.west) -|  ++(0,0) -|  node[fill=white, pos=.7, rotate=0, align=center] {ja\\k<2}(4.north);
+\draw[pfeil_einfach] (4.west) -|  ++(0,0) -|  node[fill=white, pos=.7, rotate=0, align=center] {ja}(5.north);
+\draw[pfeil_einfach] (5.south) -|  ++(0,-.4) -|  node[fill=white, pos=.25, rotate=0, align=center] {nein}(7.north);
+\draw[pfeil_einfach] (5.west) -|  ++(0,0) -|  node[fill=white, pos=.7, rotate=0, align=center] {ja}(6.north);
+\draw[pfeil_einfach] (8.south) -|  ++(0,0) -|  node[fill=white, pos=.7, rotate=0, align=center] {ja}(14.north);
+\draw[pfeil_einfach] (4.east) -|  ++(0,0) -|  node[fill=white, pos=.7, rotate=0, align=center] {nein}(8.north);
+\draw[pfeil_einfach] (3.east) -|  ++(0,0) -|  node[fill=white, pos=.3, rotate=0, align=center] {nein k=1}(9.north);
+\draw[pfeil_einfach] (8.east) -|  ++(0,0) |-  node[fill=white, pos=.75, rotate=0, align=center] {nein}(13.west);
+\draw[pfeil_einfach] (1.east) -|  ++(0,0) -|  node[fill=white, pos=.3, rotate=0, align=center] {nein}(10.north);
+\draw[pfeil_einfach] (2.east) -|  ++(0,0) |-  node[fill=white, pos=.7, rotate=0, align=center] {nein}(10.west);
+\draw[pfeil_einfach] (2.south) -|  ++(0,-.3) -|  node[fill=white, pos=.25, rotate=0, align=center] {unsicher}(11.north);
+\draw[pfeil_einfach] (11.south) -|  ++(0,-.4) -|  node[ pos=.3, rotate=0, align=center] {}(12.north);
+\end{tikzpicture}
+}
+
+\label{fig:myLabel}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h]
+\centering
+\caption{Vergleich der Experimente, eigene Darstellung in Anlehnung an \cite{hewing}}
+\resizebox{\textwidth}{!}{%
+
+
+\begin{tikzpicture}
+\tikzstyle{rechteck_bold}=[rechteck, font=\bfseries, draw=none, minimum height=1.5cm, fill=none]
+\tikzstyle{rechteck_nonbold}=[rechteck, draw=none, minimum height=1.5cm]
+\draw [rechteck, fill=mygray, draw=none] (0.45,1.8) rectangle (-15.85,-6.5);
+\node[rechteck] (5) at (-10.5,-3) {Bedingungskontrolle Sekundärvarianz möglich? (Ceteris paribus)};
+\node [rechteck] (8) at (-2.5,-3) {Bedingungskontrolle Sekundärvarianz möglich? (Ceteris paribus)};
+\node [rechteck](4) at (-6.5,0.5) {Werden Probandengruppen zufällig gebildet (nicht selegiert) und den Versuchsbedingungen oder -abfolgen zufällig zugewiesen?};
+\node [rechteck](3) at (-3,3) {Werden mehrere Gruppen/Versuchsbedingungen untersucht?};
+\node [rechteck] (2) at (0.5,5.5) {Bestimmt die unabhängige Variable die abhängige Variable? (uV -> aV)};
+\node [rechteck](1) at (4,8) {Ist eine Unterscheidung von unabhängiger Variable (uV) und abhängiger Variable (aV) möglich?};
+\node [rechteck] (11) at (9,2.5) {aV gegeben, uV gesucht};
+\node [rechteck_nonbold](10) at (9,5.5) {Korrelationsstudie \\(6)};
+\node [rechteck_nonbold](9) at (3,0.5) {Vorexperimentelle Versuchsanordnung (one-shot-case-study)\\(4)};
+\node [rechteck_nonbold, minimum width=2cm, text width=3cm] (13) at (5,-3) {Feldstudie \\(3)};
+\node [rechteck_bold] (6) at (-14,-6) {(Labor)-Experiment\\(1.1)};
+\node [rechteck_bold] (7) at (-8,-6) {Feld-Experiment\\(1.2)};
+\node [rechteck_bold] (14) at (-2.5,-6) {Quasi-Experiment\\(2)};
+\node [rechteck_nonbold] (12) at (9,-0.5) {Ex-post-facto-Studie\\(5)};
+
+\draw[pfeil_einfach] (1.west) -|  ++(0,0) -|  node[pos=.7, fill=white, rotate=0, align=center] {ja}(2.north);
+\draw[pfeil_einfach] (2.west) -|  ++(0,0) -|  node[pos=.7,fill=white , rotate=0, align=center] {ja}(3.north);
+\draw[pfeil_einfach] (3.west) -|  ++(0,0) -|  node[fill=white, pos=.7, rotate=0, align=center] {ja\\k<2}(4.north);
+\draw[pfeil_einfach] (4.west) -|  ++(0,0) -|  node[fill=white, pos=.7, rotate=0, align=center] {ja}(5.north);
+\draw[pfeil_einfach] (5.south) -|  ++(0,-.4) -|  node[fill=white, pos=.25, rotate=0, align=center] {nein}(7.north);
+\draw[pfeil_einfach] (5.west) -|  ++(0,0) -|  node[fill=white, pos=.7, rotate=0, align=center] {ja}(6.north);
+\draw[pfeil_einfach] (8.south) -|  ++(0,0) -|  node[fill=white, pos=.7, rotate=0, align=center] {ja}(14.north);
+\draw[pfeil_einfach] (4.east) -|  ++(0,0) -|  node[fill=white, pos=.7, rotate=0, align=center] {nein}(8.north);
+\draw[pfeil_einfach] (3.east) -|  ++(0,0) -|  node[fill=white, pos=.3, rotate=0, align=center] {nein k=1}(9.north);
+\draw[pfeil_einfach] (8.east) -|  ++(0,0) |-  node[fill=white, pos=.75, rotate=0, align=center] {nein}(13.west);
+\draw[pfeil_einfach] (1.east) -|  ++(0,0) -|  node[fill=white, pos=.3, rotate=0, align=center] {nein}(10.north);
+\draw[pfeil_einfach] (2.east) -|  ++(0,0) |-  node[fill=white, pos=.7, rotate=0, align=center] {nein}(10.west);
+\draw[pfeil_einfach] (2.south) -|  ++(0,-.3) -|  node[fill=white, pos=.25, rotate=0, align=center] {unsicher}(11.north);
+\draw[pfeil_einfach] (11.south) -|  ++(0,-.4) -|  node[ pos=.3, rotate=0, align=center] {}(12.north);
+
+
+\end{tikzpicture}
+
+}
+
+\label{fig:myLabel}
+\end{figure}
