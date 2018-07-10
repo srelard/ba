@@ -1,0 +1,52 @@
+\begin{figure}[h]
+\centering
+\caption{Untersuchsungsgegenstand der Arbeit, eigene Darstellung}
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}
+\tikzstyle{every node}=[font=\small,]
+\tikzstyle{rechteck_oben}=[rechteck, minimum height=0cm, minimum width=2cm, fill=mygray, draw=black, font=\bfseries]
+\tikzstyle{rechteck_unten}=[rechteck, minimum height=4cm, minimum width=2cm]
+\tikzstyle{rechteck_unten_klein}=[rechteck, minimum height=1cm, minimum width=2cm, text width=3cm]
+
+\node [rechteck_oben, text width=2.5cm] (1) at (-16.5,7) {Pretest};
+\node [rechteck_oben, text width=6.75cm] (2)at (-10.85,7) {Stimulus};
+\node [rechteck_oben, text width=3cm] (3) at (-2.5,7) {Posttest};
+\node [rechteck_oben, text width=2.5cm] (4) at (1.5,7) {Response};
+
+
+\node [rechteck_unten, minimum width=2cm, text width=2.5cm] (5) at (-16.5,4.5) {Vortest};
+\node [rechteck_unten, minimum width=2cm, text width=2.5cm] (6) at (-13,4.5) {Unabhängige Variable X1};
+\node [rechteck_unten_klein] (7) at (-9,6) {Bedingung $X1_1$};
+\node [rechteck_unten_klein] (8) at (-9,3) {Bedingung $X1_n$};
+\node [rechteck_unten_klein] (9) at (-2.5,6) {Operationalisierung AV $Y1_1$};
+\node [rechteck_unten_klein] (10) at (-2.5,3) {Operationalisierung AV $Y1_n$};
+\node [rechteck_unten, minimum width=2cm, text width=2.5cm] (11) at (1.5,4.5) {Abhängige Variable X1};
+
+\node [rechteck_unten, minimum width=2cm, text width=2.5cm] (12) at (5,4.5) { Störvariablen \setlength{\leftmargini}{1.em} \vspace{5mm} 
+\begin{itemize} \itemsep0em 
+\item Situations-\\bedingt
+\item Personen-\\bedingt
+\end{itemize}};
+
+\draw[pfeil_einfach] (1.east) -|  ++(0,0) |-  node[fill=none, pos=.7, rotate=0, align=center] {}(2.west);
+\draw[pfeil_einfach] (2.east) -|  ++(0,0) |-  node[fill=none, pos=.7, rotate=0, align=center] {}(3.west);
+\draw[pfeil_einfach] (3.east) -|  ++(0,0) |-  node[fill=none, pos=.7, rotate=0, align=center] {}(4.west);
+\draw[pfeil_einfach] (5.east) -|  ++(0,0) |-  node[fill=none, pos=.7, rotate=0, align=center] {}(6.west);
+\draw[pfeil_einfach] (6.east) -|  ++(.5,0) |-  node[fill=none, pos=.7, rotate=0, align=center] {}(7.west);
+\draw[pfeil_einfach] (6.east) -|  ++(.5,0) |-  node[fill=none, pos=.7, rotate=0, align=center] {}(8.west);
+\draw[pfeil_einfach] (7.east) -|  ++(0,0) |-  node[fill=white, pos=.75, rotate=0, align=center] {beeinflusst}(9.west);
+\draw[pfeil_einfach] (8.east) -|  ++(0,0) |-  node[fill=white, pos=.75, rotate=0, align=center] {beeinflusst}(10.west);
+\draw[pfeil_einfach] (7.east) -- node[fill=white, pos=.5, rotate=0, align=center] {beeinflusst}(10.west);
+\draw[pfeil_einfach] (8.east) -- (9.west);
+\draw[pfeil_einfach] (9.east) -|  ++(.5,0) |-  node[fill=none, pos=.7, rotate=0, align=center] {}(11.west);
+\draw[pfeil_einfach] (10.east) -|  ++(.5,0) |-  node[fill=none, pos=.7, rotate=0, align=center] {}(11.west);
+\draw[pfeil_einfach, densely dashed] (12.south) -|  ++(0,-.5) -|  node[fill=white, pos=.23, rotate=0, align=center] {Konfundierung}(10.south);
+\draw  (-18.5,8) rectangle (7,1.5);
+\node[] (13) at (5.5,0.5) {Kontrollierte Umgebung};
+\node(14) at (-6,1.65) {};
+\draw[pfeil_einfach] (13.west) -|  ++(0,0) -|  node[fill=none, pos=.7, rotate=0, align=center] {}(14.south);
+\end{tikzpicture}
+}
+
+\label{fig:myLabel}
+\end{figure}
