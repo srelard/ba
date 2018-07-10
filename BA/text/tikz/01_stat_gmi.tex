@@ -16,19 +16,24 @@
   %xtick = {1972-01-01, 1980-01-01,1990-01-01,2000-01-01,2005-01-01,2010-01-01,2015-01-01},
  xticklabel=\year,
   ymajorgrids=true,
+  yminorgrids=true,
  minor y tick num = 3,
   %xlabel=Jahr,
   %extra y ticks={820, 200},
   %extra y tick style={grid=major,yticklabel pos=right,ytick pos=right},
  %tick label style={xshift=-1cm},%enlarge x limits=1,
   ylabel=Anzahl Veröffentlichungen,
-  grid style=dashed,
+  grid=minor,
+  grid=major,
+  grid style=densely dashed,
+  grid style=very thin,
+  grid style=black,
   width=\textwidth,
    height=\axisdefaultheight,
   legend pos=north east]
   
-\addplot [thin, blue!50!black]table [x=Year, y=GM]{text/tikz/data/dat2.dat};
-\addplot [thin, green!20!black]table [x=Year, y=GMI]{text/tikz/data/dat2.dat};
+\addplot [thin, \fuellung black!90!]table [x=Year, y=GM]{text/tikz/data/dat2.dat};
+\addplot [thin, \fuellung black!30!]table [x=Year, y=GMI]{text/tikz/data/dat2.dat};
 %\addplot [thin, blue] coordinates {(1975-01-01, 10) (2010-01-01, 500)};
 \addlegendentry{Geschäftsmodell}
 \addlegendentry{Geschäftsmodellinnovation}

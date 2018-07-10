@@ -1,0 +1,87 @@
+\begin{figure}[h]
+\centering
+\caption{Untersuchsungsgegenstand der Arbeit, eigene Darstellung}
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}
+\tikzstyle{every node}=[font=\small]
+\draw [fill=\fuellung, draw=none]  (-8.65,-0.3) node (v1) {} rectangle (9.6,-1.6);
+\node[rechteck, minimum height=5cm, align=left, minimum width=4cm, text width=4.cm, draw, outer sep=10pt](4) at (-6.5,3) {
+Konzept A\\
+\qquad Subkonzept $A1$\\
+\qquad Subkonzept $A2$\\
+Konzept B\\
+\qquad Subkonzept $B1$\\
+\qquad Subkonzept $B2$\\
+Konzept C\\
+\qquad Subkonzept $C1$\\
+\qquad Subkonzept $C2$\\
+.\\.\\
+Konzept $k$\\
+\qquad Subkonzept $k1$\\
+\qquad Subkonzept $k2$\\
+};
+
+
+
+
+\node[rechteck, minimum height=1cm, align=left, minimum width=4cm, text width=4.cm, draw=none, fill=none, outer sep=10pt] (5)at (-6.5,-1) {
+Erkenntnisse\\
+\qquad Positiver Einfluss \\
+\qquad Negativer Einfluss \\
+};
+
+\node[rechteck, minimum height=1cm, align=left, minimum width=4cm, text width=18.cm, draw=none, outer sep=10pt] (6) at (0.5,-3) {
+Implikationen für die Forschung im Bereich Geschäftsmodellmodellierungstools\\
+\qquad Maßnahme $1$ \\
+\qquad Maßnahme $2$ \\
+\qquad $...$ \\
+\qquad Maßnahme $n$ \\
+};
+
+\node[rechteck, minimum height=2.5cm, text height=.5cm,align=left, minimum width=4cm, text width=4cm, draw=none](3) at (-6.5,7.5) {
+Konzept  \qquad\qquad  \\
+\
+};
+\node [rechteck, minimum height=2cm, text height=.5cm,align=left, minimum width=14cm, text width=14cm, draw=none] (13)at (3,7.1) {
+\begin{tabular}{llllllllllllllllll} 
+{
+\rotatebox[origin=c]{90}{ \cite{Paper [1]}} & \rotatebox[origin=c]{90}{ \cite{Paper [2]}} & \rotatebox[origin=c]{90}{ \cite{Paper [3]}} & \rotatebox[origin=c]{90}{ \cite{Paper [4]}} & \rotatebox[origin=c]{90}{ \cite{Paper [5]}} & \rotatebox[origin=c]{90}{ \cite{Paper [6]}} & \rotatebox[origin=c]{90}{ \cite{Paper [7]}} & \rotatebox[origin=c]{90}{ \cite{Paper [8]}} & \rotatebox[origin=c]{90}{ \cite{Paper [9]}} & \rotatebox[origin=c]{90}{ \cite{Paper [10]}} & \rotatebox[origin=c]{90}{ \cite{Paper [11]}} & \rotatebox[origin=c]{90}{ \cite{Paper [12]}} & \rotatebox[origin=c]{90}{ \cite{Paper [13]}} & \rotatebox[origin=c]{90}{ \cite{Paper [14]}} & \rotatebox[origin=c]{90}{ \cite{Paper [15]}} & \rotatebox[origin=c]{90}{ \cite{Paper [16]}} & \rotatebox[origin=c]{90}{ \cite{Paper [17]}} & \rotatebox[origin=c]{90}{ \cite{Paper [...]}}
+}
+\end{tabular}
+};
+
+
+
+
+\node[rotate=90, draw,align=center, draw=none] (1) at (-10.25,3) {Vergleichsdimensionen};
+
+\node[rotate=270, draw,align=center,draw=none] (l) at (11.5,3) {RQ1\\};
+\node[rotate=270, draw,align=center, draw=none] (r) at (11.5,-3) {RQ2\\};
+
+\draw[] (1.south) -|  ++(.0,0) |-  node[fill=none, pos=.25, rotate=0, align=center] {}(4.north west);
+\draw[] (1.south) -|  ++(.0,0) |-  node[fill=none, pos=.25, rotate=0, align=center] {}(4.south west);
+
+
+
+
+\draw[pfeil_einfach] (5.west) -|  ++(-1.,0) |-  node[fill=none, pos=.25, rotate=90,above, align=center] {Synthese Implikationen \\für GMMT}(6.west);
+
+\node[ rechteck, minimum height=6cm, align=left, minimum width=4cm, text width=13.cm, draw=none, outer sep=10pt] (inner) at (2.95,3) {
+};
+\draw[] (l.south) -|  ++(-.5,0) |-  node[fill=none, pos=.25, rotate=0, align=center] {}(inner.north east);
+\draw[] (l.south) -|  ++(-.5,0) |-  node[fill=none, pos=.25, rotate=0, align=center] {}(inner.south east);
+
+\draw[] (r.south) -|  ++(-.5,0) |-  node[fill=none, pos=.25, rotate=0, align=center] {}(6.north east);
+\draw[] (r.south) -|  ++(-.5,0) |-  node[fill=none, pos=.25, rotate=0, align=center] {}(6.south east);
+
+\draw[draw](9.6,6.2) -- (-8.5,6.2);
+\draw[draw](9.6,8.5) -- (-8.5,8.5);
+\draw[draw](9.6,-4) -- (-8.5,-4);
+\draw[draw](9.6,-2) -- (-8.5,-2);
+%\draw[draw](9.6,6.26) -- (-8.4,6.26);
+\draw [fill=mygray!50!, draw=none, align=center]  (-4,6) node (v1) {} rectangle node{Konzeptorientierter Vergleich der Experimente \\in Form einer Taxonomie} (9.6,0);
+\end{tikzpicture}
+}
+
+\label{fig:myLabel}
+\end{figure}

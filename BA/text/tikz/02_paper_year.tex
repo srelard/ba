@@ -6,8 +6,19 @@
 
 
 \begin{tikzpicture}
-\begin{axis}[ybar interval, ymax=55,ymin=0, ybar interval=.95, date coordinates in = x,  date ZERO = 1950-01-01, xmax = 2020-12-31, minor y tick num = 3, ylabel = Anzahl Veröffentlichungen, xticklabel=\year,grid style=dashed, grid style=black, width=\textwidth, height=\axisdefaultheight]
-\addplot[fill=mygray, ultra thin, draw=none] coordinates { (1986-01-01,5)(1988-01-01, 5) (1990-01-01, 35) (1992-01-01, 50) (1994-01-01, 30) (1996-01-01, 15) (1998-01-01, 22) (2000-01-01, 4) (2002-01-01, 44) (2004-01-01, 30) (2006-01-01, 14) (2008-01-01, 23) (2010-01-01, 9) (2012-01-01, 11) (2014-01-01, 29)};
+\begin{axis}[ybar interval, 
+ymax=50,ymin=0, 
+ybar interval=.95, 
+date coordinates in = x,  date ZERO = 1988-01-01, 
+xmax = 2014-12-31, 
+minor y tick num = 5, ylabel = Anzahl Veröffentlichungen,
+xticklabel=\year,
+grid style=dashed, 
+grid style=black, 
+ymajorgrids=true,
+yminorgrids=false,
+width=\textwidth, height=\axisdefaultheight]
+\addplot[fill=\fuellung, ultra thin, draw=none] coordinates { (1986-01-01,5)(1988-01-01, 5) (1990-01-01, 35) (1992-01-01, 40) (1994-01-01, 30) (1996-01-01, 15) (1998-01-01, 22) (2000-01-01, 4) (2002-01-01, 44) (2004-01-01, 30) (2006-01-01, 14) (2008-01-01, 23) (2010-01-01, 9) (2012-01-01, 11) (2014-01-01, 29)};
 \end{axis}
 \end{tikzpicture}
 
