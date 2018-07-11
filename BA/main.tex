@@ -1,4 +1,5 @@
 %//Allgemeine Formatierung\\%
+%\PassOptionsToPackage{svgnames}{xcolor} %farbige blöcke
 \documentclass[
 %DIV = calc, %automatische Berechnung vonsseitenrändern
 10pt,a4paper,oneside,bibtotoc, liststotoc, headsepline, smallheadings, openright, fleqn,appendixprefix, BCOR5mm]
@@ -23,7 +24,7 @@
 \singlespacing % Zeilenabstand setzen (alternativ: onehalfspacing, doublespacing)
 \usepackage[
 includeheadfoot,
-left=3cm,right=2cm,top=2cm,bottom=2cm, showframe]{geometry}
+left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{4}
 
@@ -60,6 +61,9 @@ font=small
 \newtheorem{definition}{Definition}
 \newtheorem{lemma}{Lemma}
 \usepackage[withpage]{acronym}
+\usepackage{fancybox}
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{theorems, listings}
 
 %//Tikz etc.\\%
 \usepackage{tikz}
@@ -70,8 +74,44 @@ font=small
 \usepgfplotslibrary{dateplot}
 \usepgfplotslibrary{units}
 
+%//Color-Blöcke\\%
+\newenvironment{myexampleblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=LightGreen,colframe=DarkGreen,%
+    colbacklower=LimeGreen!75!LightGreen,%
+    title=#1]}%
+    {\endtcolorbox}
+\newenvironment{myalertblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=LightCoral,colframe=DarkRed,%
+    colbacklower=Tomato!75!LightCoral,%
+    title=#1]}%
+    {\endtcolorbox}
+\newenvironment{myblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=LightBlue,colframe=DarkBlue,%
+    colbacklower=DarkBlue!75!LightBlue,%
+    title=#1]}%
+    {\endtcolorbox}
+%\tcbuselibrary{skins,breakable}
+%\usetikzlibrary{shadings,shadows}
+
+%//Neue Farben\\%
+\newcommand{\fuellung}{green!35!black}
+\newcommand{\fuellungzwei}{blue!10!}
+
+%//Theoreme\\%
+\newtcbtheorem[number within=section, list inside=def]{mydef}{Definition}%
+{enhanced, colback=green!0,colframe=\fuellung,fonttitle=\bfseries, description delimiters={\flqq}{\frqq}, description font=\mdseries\ttfamily, boxrule=1pt,toprule=3pt, boxsep=5pt, arc=.5mm, list text={test}}{th}
+
+
+
 %//Tabellen etc.\\%
 \usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{tablefootnote}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
@@ -106,8 +146,7 @@ doi=false
 %\DefineBibliographyStrings{ngerman}{andothers={et al.}} % et al. statt u.a.
 %\renewcommand*{\nameyeardelim}{\addcomma\space} % Macht im Zitat ein Komma vor das Jahr
 
-%//Neue Befehle\\%
-\newcommand{\fuellung}{blue!10!}
+
 
 %//Metadaten\\%
 \newcommand{\logo}{
@@ -124,7 +163,7 @@ doi=false
 \newcommand{\titel}{
 	Experimente in der Wirtschaftsinformatik zu Kreativität: Ein
 	Systematischer Literaturüberblick und Implikationen für
-	Geschäftsmodellmodellierungstools
+	Geschäftsmodell-\\modellierungstools
 }
 \newcommand{\vorgelegtvon}{
 	vorgelegt im Rahmen der Abschlussprüfung\\
@@ -158,6 +197,7 @@ doi=false
 \input{text/preamble/titelpage.tex} \cleardoublepage
 \input{text/preamble/erklaerung} \cleardoublepage
 \input{text/preamble/abstract} \cleardoublepage
+\input{text/preamble/vorwort} \cleardoublepage
 \pagestyle{scrheadings}
 \frontmatter
 \tableofcontents \cleardoublepage
@@ -165,6 +205,7 @@ doi=false
 \listoffigures \cleardoublepage
 %\listofalgorithms \cleardoublepage
 \listoftables \cleardoublepage
+\tcblistof[\chapter]{def}{Definitionsverzeichnis}\cleardoublepage
 \input{text/preamble/abkuerzung} \cleardoublepage
 
 %//Ausprobieren\\%
@@ -181,22 +222,14 @@ doi=false
 \input{BA/text/tikz/02_paper_year.tex}
 \input{BA/text/tikz/04_venn.tex}
 \input{BA/text/tikz/05_gegenstand.tex}
-\input{text/mainmatter/01_einleitung/01_einleitung}
-\input{text/mainmatter/02_grundlagen/02_grundlagen_exp}
-\input{text/mainmatter/02_grundlagen/02_grundlagen_gm}
-\input{text/mainmatter/02_grundlagen/02_grundlagen_krea}
-\input{text/mainmatter/02_grundlagen/02_grundlagen_rev}
-\input{text/mainmatter/02_grundlagen/02_grundlagen_wi}
-\input{BA/text/mainmatter/03_methode/031_literaturanalyse_rq1/0311_klassifikation.tex}
-\input{BA/text/mainmatter/03_methode/031_literaturanalyse_rq1/0312_identifikation.tex}
-\input{BA/text/mainmatter/03_methode/031_literaturanalyse_rq1/0313_analyse.tex}
-\input{BA/text/mainmatter/03_methode/031_literaturanalyse_rq1/0314_ergebnisse.tex}
-\input{BA/text/mainmatter/03_methode/032_implikationen_rq2/0321_matching_gmi_css.tex}
-\input{BA/text/mainmatter/03_methode/032_implikationen_rq2/0322_ergebnisse_implikationen.tex}
-%\input{BA/text/mainmatter/04_ergebnisse/041_ergebnisse.tex}
-\input{BA/text/mainmatter/05_diskussion/051_diskussion.tex}
-\input{BA/text/mainmatter/06_future_avenues/061_future_avenues.tex}
-\input{BA/text/mainmatter/07_fazit/071_fazit.tex}
+\input{text/mainmatter/01_einleitung/meta_einleitung}
+\input{BA/text/mainmatter/02_grundlagen/meta_grundlagen.tex}
+\input{BA/text/mainmatter/03_methode/031_literaturanalyse_rq1/meta_rq1.tex}
+\input{BA/text/mainmatter/03_methode/032_implikationen_rq2/meta_rq2.tex}
+\input{BA/text/mainmatter/04_ergebnisse/meta_ergebnisse.tex}
+\input{BA/text/mainmatter/05_diskussion/meta_diskussion.tex}
+\input{BA/text/mainmatter/06_future_avenues/meta_future.tex}
+\input{BA/text/mainmatter/07_fazit/meta_fazit.tex}
 %\input{text/stand}
 %\input{text/konzept}
 %\input{text/ergebnisse}
