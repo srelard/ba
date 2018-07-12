@@ -1,5 +1,5 @@
 %//Allgemeine Formatierung\\%
-%\PassOptionsToPackage{svgnames}{xcolor} %farbige blöcke
+\PassOptionsToPackage{svgnames}{xcolor} %farbige blöcke
 \documentclass[
 %DIV = calc, %automatische Berechnung vonsseitenrändern
 10pt,a4paper,oneside,bibtotoc, liststotoc, headsepline, smallheadings, openright, fleqn,appendixprefix, BCOR5mm]
@@ -24,7 +24,9 @@
 \singlespacing % Zeilenabstand setzen (alternativ: onehalfspacing, doublespacing)
 \usepackage[
 includeheadfoot,
-left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+left=3cm,right=2cm,top=2cm,bottom=2cm,
+showframe
+]{geometry}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{4}
 
@@ -96,8 +98,8 @@ font=small
     colbacklower=DarkBlue!75!LightBlue,%
     title=#1]}%
     {\endtcolorbox}
-%\tcbuselibrary{skins,breakable}
-%\usetikzlibrary{shadings,shadows}
+\tcbuselibrary{skins,breakable}
+\usetikzlibrary{shadings,shadows}
 
 %//Neue Farben\\%
 \newcommand{\fuellung}{green!35!black}
@@ -105,8 +107,7 @@ font=small
 
 %//Theoreme\\%
 \newtcbtheorem[number within=section, list inside=def]{mydef}{Definition}%
-{enhanced, colback=green!0,colframe=\fuellung,fonttitle=\bfseries, description delimiters={\flqq}{\frqq}, description font=\mdseries\ttfamily, boxrule=1pt,toprule=3pt, boxsep=5pt, arc=.5mm, list text={test}}{th}
-
+{enhanced, colback=green!0,colframe=\fuellung,fonttitle=\bfseries, description delimiters={\flqq}{\frqq}, description font=\mdseries\ttfamily, boxrule=0.4pt,toprule=3pt, boxsep=5pt,arc=2mm, list text={test}, drop shadow, sharp corners}{def}
 
 
 %//Tabellen etc.\\%
