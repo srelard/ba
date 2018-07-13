@@ -7,3 +7,126 @@ Eine Zusammenfassung der Arbeit in englischer Sprache.
 \\\\
 {\bf Keywords:} experiment, creativity, design science research, literature review, creativity support system, businessmodelmodellingtool 
 \\\\\\
+
+
+\begin{table}[H]
+\centering
+\caption{My Caption}
+\label{tab: myLabel}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|}
+\xymatrix@=4em{
+A \ar[rr] & &B \\ 
+& C\ar[ur]\ar@{.>}[ul]\\
+}   & \xymatrix@=4em{
+A \ar[rr] & &B \\ 
+& C\ar[ur]\ar@{.>}[ul]\\
+}        & \xymatrix@=4em{
+A \ar[rr] & &B \\ 
+& C\ar[ur]\ar@{.>}[ul]\\
+}  \\
+&&\\
+\footnotesize	(a) Caption 1&\footnotesize (b) Caption 2&\footnotesize (c) Caption 3\\
+\end{tabular}}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+
+\begin{subtable}[t]{0.3\linewidth}
+\begin{tabular}{c}
+\xymatrix@=4em{
+X \ar[rr] & &Y \\ 
+%& C\ar[ur]\ar@{.>}[ul]\\
+} 
+\end{tabular}
+\vspace{.9cm}
+\subcaption{Subtable Tabelle Nr. 1}
+\end{subtable}
+\hfill
+\begin{subtable}[t]{0.3\linewidth}
+\begin{tabular}{c}
+\xymatrix@=4em{
+X \ar[rr] & &Y \\ 
+& C\ar[ur]\ar@{.>}[ul]\\
+} 
+\end{tabular}
+\subcaption{Subtable Tabelle Nr. 1}
+\end{subtable}
+\hfill
+\begin{subtable}[t]{0.3\linewidth}
+\begin{tabular}{c}
+\xymatrix@=4em{
+A \ar[rr] & &B \\ 
+& C\ar[ur]\ar@{.>}[ul]\\
+} 
+\end{tabular}
+\subcaption{Subtable Tabelle Nr. 2}
+\end{subtable}
+
+\caption{ Fachgebiet und Logo}
+\end{table}
+
+
+
+
+
+
+\begin{table}[H]
+\centering
+\begin{subtable}[t]{0.22\linewidth}
+\begin{tabular}{c}
+\input{BA/text/tikz/zielscheibe/ziel1.tex}
+\end{tabular}
+\subcaption{Hohe Reliabilität, Geringe Validität}
+\end{subtable}
+\hfill
+\begin{subtable}[t]{0.22\linewidth}
+\begin{tabular}{c}
+\input{BA/text/tikz/zielscheibe/ziel2.tex}
+\end{tabular}
+\subcaption{Geringe Reliabilität, Mittlere Validität}
+\end{subtable}
+\hfill
+\begin{subtable}[t]{0.22\linewidth}
+\begin{tabular}{c}
+\input{BA/text/tikz/zielscheibe/ziel3.tex}
+\end{tabular}
+\subcaption{Geringe Reliabilität, Geringe Validität}
+\end{subtable}
+\hfill
+\begin{subtable}[t]{0.22\linewidth}
+\begin{tabular}{c}
+\input{BA/text/tikz/zielscheibe/ziel4.tex}
+\end{tabular}
+\subcaption{Hohe Reliabilität, Hohe Validität}
+\end{subtable}
+
+\caption{ Fachgebiet und Logo}
+\end{table}
+
+
+
+
+
+
+\begin{figure} [H]
+\centering
+\resizebox{.3\textwidth}{!}{%
+\begin{tikzpicture}[every node/.style={anchor=center},>=stealth']
+\matrix (m) [matrix of math nodes, row sep=3em, column sep=3em, ampersand replacement=\&]
+{ A \& B \\
+  C \& D \\ 
+  \& \&E\\};
+\draw[->] (m-1-1) -- node[above] {$\scriptstyle f$} (m-1-2);
+\draw[->] (m-1-2) -- node[right] {$\scriptstyle j$} (m-2-2);
+\draw[->] (m-1-1) -- node[left]  {$\scriptstyle i$} (m-2-1);
+\draw[->] (m-2-1) -- node[below] {$\scriptstyle g$} (m-2-2);
+\draw[->] (m-2-1) -- node[below] {$\scriptstyle g$} (m-3-3);
+\draw[->] (m-1-2) -- node[below] {$\scriptstyle g$} (m-3-3);
+\end{tikzpicture}}
+\caption{Caption}
+\label{fig:my_label}
+\end{figure}
+

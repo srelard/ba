@@ -17,6 +17,7 @@
 \usepackage{float} % Ermöglicht das Erstellen von eigenen Float Umgebungen
 \usepackage[section]{placeins} % Verhindert das Wandern von floats in eine andere section
 \usepackage{makeidx}
+\usepackage{microtype} % Abstand zwischen Zeichen anpassen
 
 %//Syntaktische Formatierung\\%
 \usepackage{scrlayer-scrpage}%Kopf- Fußzeile
@@ -69,12 +70,12 @@ font=small
 
 %//Tikz etc.\\%
 \usepackage{tikz}
-\usetikzlibrary{arrows}
-\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows, shapes.geometric, matrix}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \usepgfplotslibrary{dateplot}
 \usepgfplotslibrary{units}
+\usepackage[all]{xy}
 
 %//Color-Blöcke\\%
 \newenvironment{myexampleblock}[1]{%
