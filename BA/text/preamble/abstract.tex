@@ -31,9 +31,13 @@ A \ar[rr] & &B \\
 \end{table}
 
 
+
+
+
+
+
 \begin{table}[H]
 \centering
-
 \begin{subtable}[t]{0.3\linewidth}
 \begin{tabular}{c}
 \xymatrix@=4em{
@@ -107,7 +111,17 @@ A \ar[rr] & &B \\
 \end{table}
 
 
-
+\begin{table}[H]
+\centering
+\caption{My Caption}
+\label{tab: myLabel}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{C{.25\textwidth}C{.25\textwidth}C{.25\textwidth}C{.25\textwidth}}
+\input{BA/text/tikz/zielscheibe/ziel1.tex}  & \input{BA/text/tikz/zielscheibe/ziel2.tex}      & \input{BA/text/tikz/zielscheibe/ziel3.tex} & \input{BA/text/tikz/zielscheibe/ziel4.tex} \\
+&&&\\
+	(a) Hohe Reliabilität, Geringe Validität 1& (b) Geringe Reliabilität, Mittlere Validität& (c) Geringe Reliabilität, Geringe Validität & (d) Hohe Reliabilität, Hohe Validität\\
+\end{tabular}}
+\end{table}
 
 
 
@@ -130,3 +144,18 @@ A \ar[rr] & &B \\
 \label{fig:my_label}
 \end{figure}
 
+
+
+
+\xymatrix@=4em{
+&&Geschäftsmodell&\\ 
+&&Domain \ar[u]\ar[dr]&\\
+&Field intern \ar[ur]\ar[dl]&&Person \ar[ll]\\
+Field extern  \ar@/{}_{-3pc}/[uurr]&&&\\
+} 
+
+\begin{tikzcd}
+r \arrow[rr, bend left] & z & t \arrow[dd] \\
+ & x \arrow[rd] \arrow[u] &  \\
+y \arrow[ru] \arrow[uu] &  & z \arrow[ll]
+\end{tikzcd}

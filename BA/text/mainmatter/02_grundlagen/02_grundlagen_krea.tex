@@ -29,3 +29,42 @@ Der body of litertur innerhalb der Kreativitä ist enorm. Zudem sind Veröffentl
   Im Zuge dieser Arbeit impliziert der Begriff „Wirtschaftsinformatik“ die Betrachtung (konstruierter) IT-Artefakte ausschließlich in Form softwareseitiger Anwendungssysteme.
   This theorem is numbered with  \ref{def:def_krea} and is given on page \pageref{def:def_krea}.
 \end{mydef}
+
+In der Literatur existeiert trotz vieler Versuche keine einheitliche Definition, wie sich Kreativität definieren lässt. Rhode identifizierte 1961 in diesem Zusammenhang vier Cluster, welche interaktiv auftreten können und aus denen sich das Gesamtkonstrukt der Kreativität bildet. Kreativität kann mdemanch gesehen werden als das Ergebnis kreativer Arbeit und kann selbst kreativ sein. Ein weiterer Forshungsaspket bezieht die kreative Person in den Mittelpunkt, wogegen anderen arbeiten Kreativität als einen Prozess, eine Abfolger kreativer Tätigkeiten sehen,
+Diese sogenannten 4P bilden das Grundfundament und diesnen als Basis der Literaturrecherche, indem jedem Paper eine oder mehrer Dimensionen der 4Ps nach Rhode zugeweisenw erden. Alos: Liegt im Fokus des Paper die Person (inwieweit steigert die SW-Lösung die Kreativität einer Person) oder aber das Endresultat (Wie kreativ ist das Endprodukt?). Der kreative Prozess manifestiert sich dabei in erster Linie durch die Wahl der unabhänigen Variablen zb. durch den Einsatz bestimmter Kreativitätstechniken oder Prozessabfolgen.
+
+Kreatives Produkt: Useful, Originality: Entschiedne wird das durch das Fielkd: System Model der Kreativität
+
+Über usefullnes, Effektivität entscheiden die gatekeeper
+
+Die Grundidee des Systemmodells nach Cisk ist jedens, dass neue Ideen um kreativ su sein nicht nu neu sein müssen, sondern auf angebracht und nützlich. Die Effektivität ist demnach durch das soziale Umfeld zu bestimmen, in dem diese neue Ideen ablehnen oder annehmen. Bein Annahme können neue Ideen dann zur bestehenden Wissensbasis (Domäne) hibnzugefügt werden.
+\pgfdeclarelayer{edgelayer}
+\pgfdeclarelayer{nodelayer}
+\pgfsetlayers{edgelayer,nodelayer,main}
+
+\tikzstyle{none}=[inner sep=0pt]
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-8, 3) {Person};
+		\node [style=none] (1) at (-5, 3) {Press};
+		\node [style=none, align=center] (2) at (-8, 1) {Process \\ Osborn, Wallas};
+		\node [style=none] (3) at (-5, 1) {Product};
+		\node [style=none] (4) at (-3, 1) {Einfluss};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (0.center) to (1.center);
+		\draw (0.center) to (2.center);
+		\draw (2.center) to (3.center);
+		\draw (3.center) to (0.center);
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (3.center);
+		\draw (3.center) to (4.center);
+		\draw [bend left=60, looseness=1.25] (0.center) to (4.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
+
+\begin{tikzcd}
+ &  & Person \arrow[dd] \arrow[rr] \arrow[rrdd] &  & Process \arrow[dd] \\
+ &  &  &  &  \\
+Einfluss \arrow[rr] &  & Produkt \arrow[rr] \arrow[rruu] &  & Press
+\end{tikzcd}

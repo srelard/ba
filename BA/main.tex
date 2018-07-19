@@ -70,7 +70,15 @@ font=small
 
 %//Tikz etc.\\%
 \usepackage{tikz}
-\usetikzlibrary{arrows, shapes.geometric, matrix}
+\usepackage{tikz-cd}
+\usetikzlibrary{
+arrows, 
+shapes.geometric, 
+matrix,
+calc,
+decorations.markings,
+decorations.pathreplacing
+}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \usepgfplotslibrary{dateplot}
