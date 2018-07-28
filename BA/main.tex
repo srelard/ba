@@ -2,7 +2,7 @@
 \PassOptionsToPackage{svgnames}{xcolor} %farbige blöcke
 \documentclass[
 %DIV = calc, %automatische Berechnung vonsseitenrändern
-10pt,a4paper,oneside,bibtotoc, liststotoc, headsepline, smallheadings, openright, fleqn,appendixprefix, BCOR5mm]
+10pt,a4paper,oneside,bibtotoc, liststotoc, headsepline, smallheadings, openright, fleqn,appendixprefix, BCOR5mm, draft]
 {scrbook}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
@@ -67,6 +67,7 @@ font=small
 \usepackage{fancybox}
 \usepackage[most]{tcolorbox}
 \tcbuselibrary{theorems, listings}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
 
 %//Tikz etc.\\%
 \usepackage{tikz}
@@ -158,45 +159,7 @@ doi=false
 
 
 
-%//Metadaten\\%
-\newcommand{\logo}{
-	\includegraphics[width=0.6\textwidth]{images/Logo_Uni_Paderborn}\\
-}
-\newcommand{\fachbereich}{
-	\begin{tabular}{c}
-	Fachgebiet Wirtschaftsinformatik   \\
-	Information Management \& E-Finance  \\
-	Prof. Dr. Dennis Kundisch    \\
-	Universität Paderborn   \\
-	\end{tabular}
-}
-\newcommand{\titel}{
-	Experimente in der Wirtschaftsinformatik zu Kreativität: Ein
-	Systematischer Literaturüberblick und Implikationen für
-	Geschäftsmodell-\\modellierungstools
-}
-\newcommand{\vorgelegtvon}{
-	vorgelegt im Rahmen der Abschlussprüfung\\
-	für den Bachelor-Studiengang\\
-	der Wirtschaftsinformatik
-}
-\newcommand{\autorpruefer}{
-	\begin{tabular}{ll}
-      Autor: & xxx xxx \\
-      Matr.-Nr.: & xxxxxx\\
-      Adresse: & xxxxxx xxxxxx xxx\\
-      & 33098 Paderborn\\
-      E-Mail: & xxxxxx@mail.upb.de\\
-      &\\
-      &\\
-      Erstprüfer: & Prof. Dr. Dennis Kundisch \\
-      Zweitprüfer: & Prof. Dr. Leena Suhl \\
-      Betreuer: & Daniel Szopinski \\
-	\end{tabular}
-}
-\newcommand{\datum}{
-	Paderborn, den \today
-}
+
 
 
 
@@ -205,6 +168,7 @@ doi=false
 \pagestyle{empty}
 \pagenumbering{alph}
 \input{text/preamble/titelpage.tex} \cleardoublepage
+\listoftodos \cleardoublepage
 \input{text/preamble/erklaerung} \cleardoublepage
 \input{text/preamble/abstract} \cleardoublepage
 \input{text/preamble/vorwort} \cleardoublepage

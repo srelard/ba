@@ -1,0 +1,29 @@
+
+
+\begin{tikzpicture}[every node/.style={anchor=center},>=stealth', every node/.style={scale=.5}]
+     \matrix (tree) [%
+       matrix of nodes,
+       minimum size=1cm,
+       column sep=1cm,
+       row sep=.5cm,
+       row 1/.style={nodes={draw,top color=white, bottom color=blue!20,rounded corners, text width=2cm, align=center, outer sep=.1cm}},
+       row 3/.style={nodes={draw,top color=white, bottom color=blue!20,rounded corners, text width=2cm, align=center, outer sep=.1cm}},
+       ]
+     {
+         & {Domäne \\ } & \\
+         &\quad&\\
+     Field  & &  Person\\
+     };
+
+%      \draw[->] (tree-1-2) -- (tree-3-1) node [midway,above] {$p$};
+%      \draw[->] (tree-1-2) -- (tree-3-3) node [midway,below] {$1-p$};
+%     \draw[] (tree-3-1) -- (tree-3-3) node [midway,below] {$1-p$};
+%      \draw[->] (tree-3-3) -- (tree-3-1) node [midway,below] {$1-p$};
+\draw (tree-1-2) to [bend left=0] node [above] {$p$} (tree-3-3)  ;
+\draw (tree-1-2) to [bend left=0]  node [above] {$p$} (tree-3-1);
+\draw (tree-3-1) to [bend left=5]  node [above] {$p$} (tree-3-3);
+\draw (tree-3-3) to [bend left=5]  node [below] {$p$} (tree-3-1);
+
+     
+
+\end{tikzpicture}
