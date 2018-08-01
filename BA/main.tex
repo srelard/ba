@@ -69,17 +69,21 @@ font=small
 \tcbuselibrary{theorems, listings}
 \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
 \usepackage{paralist} %Aufzählung wie itemize
+\usepackage{venndiagram}
 
 %//Tikz etc.\\%
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usetikzlibrary{
 arrows, 
+fit,
 shapes.geometric, 
 matrix,
 calc,
 decorations.markings,
-decorations.pathreplacing
+decorations.pathreplacing,
+backgrounds,
+shadings
 }
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
@@ -110,7 +114,6 @@ decorations.pathreplacing
     title=#1]}%
     {\endtcolorbox}
 \tcbuselibrary{skins,breakable}
-\usetikzlibrary{shadings,shadows}
 
 %//Neue Farben\\%
 \newcommand{\fuellung}{green!35!black}

@@ -57,6 +57,7 @@ Zur Lösung des Problems soll diese Arbeit 3 zusätzliche Beiträge zur Literatu
 \section{Gang der Arbeit}
 Die Arbeit im allgmeinen folgt dem qualitativen Forschungsprozess und einem rein deduktiven Vorgehen. Dabei werden aus generellen/allgemeiem Wissen (Literaturreview zu Experimenten zum Thema Kreativität im Bereich der WI) konkrete Design-Hypothesen für Geschäftsmodellierungstools abgeleitet. Der deduktive Prozess ist dabei angelehnt am kommunizierten Vorgehesnmodell nach Spens/Kova.
 Zunächst wird in Kapitel 2 die zur Beantwortung der Forschungsfragen relevanten Theorien und Hintergrundinformationen dargestellt. Im nächsten Kapitel werden dann bereits vorhandene Experimentalliteratur durchsucht und aufbereiter ("Exisitn theoretical knowledge"). Aus dem dadruch gewonnen theorethischen Rahmenwerk werden dann konkrete Hypothesen für die Forschung der Geschäftsmoellierungstools abgleietet. Die in dieser Arbeit durchgeführten Prozessschritte sind in Abbildung 1 visualisiert. 
+Der logische Aufbau der Arbeit orientiert sich am deduktiven Forschungsprozess, dargestellt von Kopac und Spens. 
 
 \missingfigure{Bild Gang der Untersuchung}
 \noindent
@@ -77,3 +78,313 @@ Zunächst wird in Kapitel 2 die zur Beantwortung der Forschungsfragen relevanten
 \end{subfigure}
 \caption{ Darstellung des Systemmodells nach Csik und Anwendung auf die Entwicklung neuer Geschäftsmodelle}
 \end{table}
+
+
+
+
+\begin{figure}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}
+[auto,
+decision/.style={diamond, draw=blue, thick, fill=blue!20,
+text width=4.5em,align=flush center,
+inner sep=1pt},
+block/.style ={ rectangle, draw, fill=none,  text centered, minimum height=15mm, text width=12em},
+line/.style ={draw, -latex,shorten >=2pt},
+cloud/.style ={draw=red, thick, ellipse,fill=red!20,
+minimum height=2em}]
+\matrix [column sep=4cm,row sep=13mm, ampersand replacement=\&]
+{
+% row 1
+ \node [block, draw=none, minimum height=1cm] (headerl) {Kapitelstruktur der Arbeit};\&
+ \node [block, draw=none, minimum height=1cm] (headerr) {Deduktiver Forschungsprozess nach Spens et. al};  \\
+% row 2
+\node [block] (kap1) {Kapitel 1}; \& 
+\node [block] (step1) {Prior theoretical knowledge}; \\
+% row 3
+\node [block] (kap2) {Kapitel 2}; \&
+\node [block] (step2) {Theoretical framework}; \&  \node [cloud] (rq1) {RQ1}; \\
+% row 4
+\node [block] (kap3) {Kapitel 3}; \& \node [block] (step3) {Suggestion of HP};   \\
+% row 5
+\node [block] (kap4) {Kapitel 5};\& \node [block] (step4) {Testing of HP \\ (e.g. Experiment)};  \& \node [decision] (exp) {Verifi-kation?};\\
+% row 6
+\node [block] (kap5) {Kapitel 6}; \& \node [block] (step5) {New knowledge};  \\
+};
+
+% \path[draw] (init) -- (identify);
+% \path (identify) -- (evaluate);
+% \path (evaluate) -- (decide);
+% \path (update) |- (identify);
+% \path (decide) -| node [near start] {yes} (update);
+% \path (decide) -- node [midway] {no} (stop);
+% \path [dashed] (expert) -- (init);
+% \path [dashed] (system) -- (init);
+% \path [dashed] (system) |- (evaluate);
+%\draw[red] (headerr) to [bend left=0] node [] {$sdsd$} (step1)  ;
+\draw [line](kap1.east) to [bend left=0] node [above] {$p$} (step1.west)  ;
+\draw [line](kap2.east) to [bend left=0] node [above] {$p$} (step1.west)  ;
+%\draw [line, red](step2.east) to [bend left] node [right] {$$} (step5.east)  ;
+% \draw (tree-3-1.east) to [bend left=0] node [above] {$p$} (tree-2-2.west)  ;
+% \draw (tree-4-1.east) to [bend left=0] node [above] {$p$} (tree-2-2.west)  ;
+% \draw (tree-5-1.east) to [bend left=0] node [above] {$p$} (tree-2-2.west)  ;
+% \draw (tree-5-1.east) to [bend left=0] node [above] {$p$} (tree-4-2.west)  ;
+% \draw [red](tree-2-2.east) to [bend left] node [right] {$$} (tree-6-2.east)  ;
+\draw[line] (step1) to [bend left=0] node [] {$p$} (step2)  ;
+\draw[line] (step2) to [bend left=0] node [] {$p$} (step3)  ;
+\draw [line](step3) to [bend left=0] node [] {$p$} (step4)  ;
+\draw[line, dashed] (exp.north) -|  ++(0,.5) -|  node [above, pos=.2, align=center] {Nein} node [below, pos=.2, align=center] {ggf. Anpassung der HP} (step4.north)  ;
+\draw[line] (exp.south) |-  node [above, pos=.75] {Ja/Nein} (step5.east)  ;
+%\draw[line] (step4) to [bend left=0] node [] {$p$} (step5)  ;
+\draw[line] (step4) to [bend left=0] node [] {} (exp)  ;
+\draw[line] (step2) to [bend left=0] node [] {} (rq1)  ;
+
+\end{tikzpicture}}
+\caption{Darstellung der Vorgehensweise in der Arbeit: Kapitelstruktur links, Deduktiver Forschungsprozess rechts (in Anlehnung an Spens et al (modifiziert))}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}
+[auto,
+decision/.style={diamond, draw=blue, thick, fill=blue!20,text width=4.5em,align=flush center,inner sep=1pt},
+block/.style ={ rectangle, draw, fill=white,  text centered, minimum height=15mm, text width=12em},
+line/.style ={draw, -latex,shorten >=2pt},
+cloud/.style ={draw=red, thick, ellipse,fill=red!20, minimum height=3em, text width=5em, align=center}]
+
+\draw [fill=black!40, fill opacity=.2, draw=none, shading=Mandelbrot set] (6.6,7.4) rectangle (11.2,-8.1);
+\draw [fill=black!40, fill opacity=.2, draw=none] (-5.4,7.4) rectangle (5.3,-8.1);
+\draw [fill=black!40, fill opacity=.2, draw=none] (-11.3,7.4) rectangle (-6.6,-8.1);
+%\draw  [dashed](-0.2,8.8) --(-0.2,-8.2);
+\matrix (table) [column sep=1.5cm,row sep=1.2cm, ampersand replacement=\&,  nodes in empty cells]
+{
+% row 1
+ \node [block, draw, minimum height=2.3cm, fill=none] (headerll) {\textbf{Kapitelstruktur der Arbeit}};\&
+ \node [block, draw=none, minimum height=1cm, fill=none] (headerl) {\\ \quad\\\quad\\\quad\\Theorie}; \&
+ \node [block, draw=none, minimum height=1cm, fill=none] (headerr) {\\ \quad\\\quad\\\quad\\Empirie};  \&
+ \node [block, draw=, minimum height=2.3cm, fill=none] (headerrr) {\textbf{Ergebnisse}};   \\
+
+% row 2
+\node [block] (kap1) {Kapitel 1\\Problembeschreibung und Zielsetzung};
+\&  \node [block, draw=none, fill=none] (22) {};
+\&  \node [] (23) {};
+\&  \node [] (24) {};
+\\
+
+% row 3
+\node [block] (kap2) {Kapitel 2\\Grundlagen und Definitionen}; \& 
+\node [block, red, fill=white] (step1) {Prior theoretical knowledge};  
+\&  \node [] (33) {};
+\&  \node [] (34) {};
+\\
+% row 4
+\node [block] (kap3) {Kapitel 3\\Systematische Literaturanalyse}; \&
+\node [block, red, fill=white] (step2) {Theoretical framework}; \&   
+
+ \&\node [cloud, align=center] (rq1) {RQ1};\\
+% row 5
+\node [block] (kap4) {Kapitel 4\\Implikationen für GM-Modellierungstools}; \& 
+\node [block, red, fill=white] (step3) {Suggestion of HP}; \&  
+ \&\node [cloud] (rq2) {RQ2}; \\
+ 
+% row 6
+\node [block] (kap5) {Kapitel 5\\Diskussion der Ergebnisse};\& 
+ \& \node [block, blue,  fill=white] (step4) {Testing of HP \\ (e.g. Experiment)};
+ \&  \node [cloud, fill=blue!20, draw=blue] (artefakt) {Artefakt-evaluation};\\
+ 
+% row 7
+\node [block] (kap6) {Kapitel 6\\Fazit und künftige Forschungsfelder}; \& 
+\node [block, blue,  fill=white] (step5) {New knowledge};  
+\&  \node [block, fill=none, draw=none] (73) {};
+\&  \node [] (test4) {};\\
+
+% row 8
+\node [block, draw=red] (kap7) {}; \& 
+\node [block, draw=blue] (step6) {};  
+\& 
+\&  \node [] (test4) {};\\
+};
+
+
+
+ \node[fit=(headerl)(headerr), draw, minimum height=1cm, fill=none]{\textbf{Deduktiver Forschungsprozess\\ nach Spens et. al}};
+ 
+ % \node[fit=(22)(73), draw, minimum height=1cm, fill=black!20, fill opacity=.8]{Deduktiver Forschungsprolllzess\\ nach Spens et. al};
+ 
+
+ 
+%Pfeile Kapitelstruktur
+\draw [line](kap1) to [bend left=0] node [above] {} (kap2)  ;
+\draw [line](kap2) to [bend left=0] node [above] {} (kap3)  ;
+\draw [line](kap3) to [bend left=0] node [above] {} (kap4)  ;
+\draw [line](kap4) to [bend left=0] node [above] {} (kap5)  ;
+\draw [line](kap5) to [bend left=0] node [above] {} (kap6)  ;
+\draw [line, red](kap7.west) to [bend left=0] node [above] {durchgeführte Schritte} (kap7.east)  ;
+\draw [line, dashed, blue](step6.west) to [bend left=0] node [above] {geplante Schritte} (step6.east)  ;
+
+%Pfeile Interaktion Kapitel zu Prozess
+\draw [line, blue, dashed](step4.east) to [bend left=0] node [above] {$p$} (artefakt.west)  ;
+\draw[line,dashed, blue] (artefakt.south) |-  ++(0,0) |- (step5.east)  ;
+\draw[line,dashed] (kap6.east) |-  ++(.7,0) |- (step4.west)  ;
+\draw [line](kap2.east) to [bend left=0] node [above] {$p$} (step1.west)  ;
+\draw [line, dashed](kap2.east) to [bend left=0] node [above] {$p$} (step2.west)  ;
+\draw [line](kap3.east) to [bend left=0] node [above] {$p$} (step2.west)  ;
+\draw [line](kap4.east) to [bend left=0] node [above] {$p$} (step3.west)  ;
+\draw[line, red] (step1) to [bend left=0] node [] {$p$} (step2)  ;
+\draw[line, red] (step2) to [bend left=0] node [] {$p$} (step3)  ;
+%\draw [line](step3.south) to [bend left=0] node [] {$$} (step4.north)  ;
+%\draw[line, dashed] (exp.north) -|  ++(0,.5) |-  node [above, pos=.75, align=center] {Nein} node [below, pos=.75, align=center] {ggf. Anpassung der HP} (step3.east)  ;
+%\draw[line] (exp.south) |-  node [above, pos=.75] {Ja/Nein} (step5.east)  ;
+\draw[line, blue] (step3.south) -|  ++(0,-.5) -|  (step4.north)  ;
+\draw[line, blue] (step4.south) -|  ++(0,-.5) -|  (step5.north)  ;
+%\draw[line] (step4.south) to [bend left=0] node [] {$p$} (step5.north)  ;
+\draw[line, red] (step2) to [bend left=0] node [] {} (rq1)  ;
+\draw[line, red] (step3) to [bend left=0] node [] {} (rq2)  ;
+
+
+
+
+\end{tikzpicture}
+}
+\caption{Darstellung der Vorgehensweise in der Arbeit: Kapitelstruktur links, Deduktiver Forschungsprozess rechts (in Anlehnung an Spens et al (modifiziert))}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}
+[auto, 
+decision/.style={diamond, draw=blue, thick, fill=blue!20,text width=4.5em,align=flush center,inner sep=1pt},
+block/.style ={ rectangle, draw, fill=white,  text centered, minimum height=15mm, text width=12em},
+block_todo/.style ={ rectangle, draw, fill=white,  text centered, minimum height=15mm, text width=12em, rounded corners, outer sep=5},
+block_done/.style ={ rectangle, draw, fill=white,  text centered, minimum height=15mm, text width=12em, rounded corners, outer sep=5},
+block_normal/.style ={ rectangle, draw, fill=white,  text centered, minimum height=15mm, text width=12em, rounded corners, outer sep=5},
+block_phantom/.style ={ block_normal, draw=none},
+block_background/.style ={ rectangle,  draw=, fill=none,  text centered, minimum height=15mm,fill opacity=.1, rounded corners},
+output/.style ={trapezium,draw,fill=none, minimum height=10mm,  align=center, trapezium left angle=60, trapezium right angle=120, text width=70},
+line_inner/.style ={draw, -latex,shorten >=-4pt, shorten <=-4pt},
+line_outer/.style ={draw, -latex,shorten >=4pt, shorten <=4pt}]
+]
+
+
+\matrix (table) [column sep=1.5cm,row sep=1cm, ampersand replacement=\&,  nodes in empty cells, in front of path]
+{
+% row 1
+\node [block_normal, draw=none] (11) {\textbf{Logische Struktur der Arbeit}};\& [.6cm]
+ \node [block_normal, fill=none, draw=none] (12) {\\ \quad\\\quad\\\quad\\\quad\\\quad\\\textbf{Empirie}}; \&[-1cm]
+ \node [block_normal, fill=none, draw=none] (13) {\\ \quad\\\quad\\\quad\\\quad\\\quad\\\textbf{Theorie}};  \& [0cm]
+ \node [] (14) {};   \\[-.5cm]
+
+% row 2
+\node [block_normal] (21) {Kapitel 1\\Problembeschreibung und Zielsetzung};
+\&  \node [block_done] (22) {(1) Theoretisches Vorwissen};
+\&  \node [block_phantom] (23) {};
+\&  \node [] (24) {};
+\\
+
+% row 3
+\node [block_normal] (31) {Kapitel 2\\Grundlagen und Definitionen}; \& 
+\node [block_done] (32) {(2) Theoretisches Rahmenwerk};  
+\&\node [block_phantom] (33) {};  ;
+\& \node [output] (34) {RQ1\vphantom{\begin{tabular}{c}x\\ y\end{tabular}}};
+\\
+% row 4
+\node [block_normal] (41) {Kapitel 3\\Systematische Literaturanalyse}; \&
+\node [block_done] (42) {(3) Ableiten von Hypothesen}; \&   
+\node [block_phantom] (43) {}; 
+ \&\node [output] (44) {RQ2\vphantom{\begin{tabular}{c}x\\ y\end{tabular}}};\\
+ 
+% row 5
+\node [block_normal] (51) {Kapitel 4\\Implikationen für GM-Modellierungstools}; \& 
+\node [block_phantom] (52) {}; \&  
+\node [block_done] (53) {(4) Prüfung der Hypothesen\\ (z.b. experimentell)};
+ \&\node [output] (54) {Zukünftige Forschungsarbeiten}; \\
+
+% row 6
+\node [block_normal] (61) {Kapitel 5\\Diskussion der Ergebnisse};\& 
+\node [block_done] (62) {(5) Finale Schlussfolgerung / \\Neues Wissen};
+ \& \node [block_phantom] (63) {};
+ \&  \node [] (64) {};\\
+ 
+% row 7
+\node [block_normal] (71) {Kapitel 6\\Fazit und künftige Forschungsfelder}; \& 
+\node [block, fill=none, draw=none] (72) {};  \&  
+\node [block, fill=none, draw=none] (73) {};\&  
+\node [] (74) {};\\
+};
+
+
+\begin{scope}[on background layer]
+%%%HEADER%%%%%
+\node[fit=(12)(13), draw=none, minimum height=1cm, fill=none]{\textbf{Deduktiver Forschungsprozess\\ nach Spens et. al}};
+%%%%%SPALTE1%%%%%%%%%
+\node[fit=(21)(71), block_background]{};
+%%%%%SPALTE2%%%%%%%%
+\node[fit=(22)(63), block_background]{};
+\end{scope}
+ 
+ 
+%Pfeile Kapitelstruktur
+ \draw [line_inner](21) to [bend left=0] node [above] {} (31)  ;
+ \draw [line_inner](31) to [bend left=0] node [above] {} (41)  ;
+ \draw [line_inner](41) to [bend left=0] node [above] {} (51)  ;
+ \draw [line_inner](51) to [bend left=0] node [above] {} (61)  ;
+ \draw [line_inner](61) to [bend left=0] node [above] {} (71)  ;
+
+
+%Pfeile Prozess
+ \draw [line_inner](22) to [bend left=0] node [above] {} (32);
+ \draw [line_inner](32) to [bend left=0] node [above] {} (42)  ;
+ \draw [line_inner](42.south) to [bend left=0] node [above] {} (53)  ;
+ \draw [line_inner](53) to [bend left=0] node [above] {} (62.north)  ;
+
+%Pfeile Interaktion Kapitel Prozess
+ \draw [line_outer](21.east) to [bend left=0] node [above] {} (22.west)  ;
+% \draw [line_outer](31.east) to [bend left=0] node [above] {$$} (22.west)  ;
+  \draw [line_outer](31.east) -| ++ (.5,0) --  node [above] {} (22.west)  ;
+% \draw [line_outer](41.east) to [bend left=0] node [above] {$$} (32.west)  ;
+ \draw [line_outer](41.east) -| ++ (.5,0) --  node [above] {} (32.west)  ;
+ %\draw [line_outer](51.east) to [bend left=0] node [above] {$$} (42.west)  ;
+  \draw [line_outer](51.east) -| ++ (.5,0) --  node [above] {} (42.west)  ;
+ %\draw [line](61) to [bend left=0] node [above] {$$} (22)  ;
+% \draw [line](71.east) to [bend right=40] node [above] {$$} (53)  ;
+ \draw [line_outer, dashed,shorten >=-3pt](71.east) -|   node [above, pos=.3] {Theorieprüfung in Anlehung }  node [below, pos=.3] {an Kuechler et al.}(53)  ;
+ 
+%Pfeile Output
+ \draw [line_outer, shorten >=1pt](33) to [bend left=0] node [above] {} (34)  ;
+ \draw [line_outer,shorten >=1pt](43) to [bend left=0] node [above] {} (44)  ;
+ \draw [line_outer, dashed,shorten <=1pt](54) to [bend left=0] node [above] {} (53)  ;
+  \draw [line_outer, dashed](54) |-  node [above] {} (63)  ;
+
+\end{tikzpicture}
+}
+\caption{Darstellung der Vorgehensweise in der Arbeit: Kapitelstruktur links, Deduktiver Forschungsprozess rechts (in Anlehnung an Spens et al (modifiziert))}
+\end{figure}
+
+
+
+\begin{figure}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{venndiagram3sets}[labelOnlyA={},labelOnlyB={},labelOnlyC={},labelABC={$x$},labelNotABC={$N$=59},tikzoptions={scale=1.9,thick}]
+\fillACapBCapC
+\setpostvennhook
+{
+\draw[<-] (labelA) -- ++(135:2cm) node[above, align=center,text width=5cm] {Wirtschaftsinformatik: Betrachtung von Softwareartefakten};
+\draw[<-] (labelB) -- ++(45:2cm) node[above, align=center,text width=5cm] {Kreativität: Generierung bzw. Bewertung von Ideen};
+\draw[<-] (labelC) -- ++(-90:2cm) node[below, align=center,text width=10cm] {Experiment: Vorhandene Randomisierung und Kontrollgruppendesign};
+\draw[<-] (labelABC) -- ++(0:3cm) node[right,text width=2cm,align=flush right] {Zielliteratur};
+\draw[<-] (labelNotABC) -- ++(-135:1cm)
+node[below,text width=5cm,align=flush left]
+{Identifizierte und analysierte Paper};
+}
+
+
+\end{venndiagram3sets}
+}
+\caption{Darstellung der Kriterien zur Identifikation relevanter Arbeiten als Anfangsschritt der systematischen Litertaurrecherche}
+\end{figure}
